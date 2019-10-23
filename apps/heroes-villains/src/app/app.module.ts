@@ -24,8 +24,10 @@ export function getZipkinConfig() {
 
 @NgModule({
   declarations: [AppComponent, AboutComponent],
-  imports: [BrowserModule, HttpClientModule, CoreModule, AppRoutingModule, AppStoreModule, ZipkinModule.forRoot()],
-  providers: [{ provide: TRACE_MODULE_CONFIGURATION, useFactory: getZipkinConfig }],
+  imports: [BrowserModule, HttpClientModule, CoreModule, AppRoutingModule, AppStoreModule /*ZipkinModule.forRoot()*/],
+  providers: [
+    /*{ provide: TRACE_MODULE_CONFIGURATION, useFactory: getZipkinConfig }*/
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

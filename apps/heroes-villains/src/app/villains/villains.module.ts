@@ -16,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule, ZipkinModule],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule /*ZipkinModule*/],
   exports: [RouterModule, VillainsComponent],
   declarations: [VillainsComponent, VillainListComponent, VillainDetailComponent]
 })

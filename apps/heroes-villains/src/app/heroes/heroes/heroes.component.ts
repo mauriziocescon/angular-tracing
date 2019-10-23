@@ -15,11 +15,11 @@ export class HeroesComponent implements OnInit {
   message = '?';
   heroToDelete: Hero | null;
   showModal = false;
-  private tracer: LocalTracer;
+  // private tracer: LocalTracer;
 
-  constructor(private heroService: HeroService, traceRoot: ZipkinTraceRoot) {
+  constructor(private heroService: HeroService /*, traceRoot: ZipkinTraceRoot*/) {
     this.heroes$ = heroService.entities$;
-    this.tracer = traceRoot.localTracer();
+    // this.tracer = traceRoot.localTracer();
   }
 
   ngOnInit() {
